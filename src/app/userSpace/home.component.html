@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+
+<body>
+<div >
+      <nav class="navbar navbar-default bar" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="home">
+                <img alt="Brand" src="assets/images/logo1.png" class="left">
+              </a>
+            </div>
+            <button  class="right " type="button"(click)="logout()"><img src="assets/images/power3.jpg"/></button>
+          </div>
+      </nav>
+        <br>
+        <br>
+        <br>
+        <h2 class="center">HELLO {{mail}}</h2>
+        <br>
+    </div>
+      <br>
+      <br>
+
+      <br>
+
+   
+
+      <div class="row ">
+      <div class="col-sm-3 col-md-3">
+        <div class="panel-group" id="accordion">
+          <div class="navbar navbar-default">
+
+              <h4 class="panel-title">
+
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-folder-close">
+                  </span >MY  DRIVE</a>
+              </h4> 
+
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse in">
+              <ul class="list-group">
+
+                <li class="list-group-item"><span class="glyphicon glyphicon-open-file btn-lg"></span><button type="button" class="btn btn-link" (click)="myF()"><h4>My FIles</h4></button>
+                
+
+                <li class="list-group-item"><span class="glyphicon glyphicon-save-file  btn-lg"></span> <button type="button" class="btn btn-link" (click)="addF()"><h4>Add Files</h4></button>
+
+
+                <li class="list-group-item"><span class="glyphicon glyphicon-time btn-lg"></span><button type="button" class="btn btn-link" ><h4>Recently</h4></button>
+
+                <li class="list-group-item"> <span class="glyphicon glyphicon-share btn-lg" ></span><button type="button" class="btn btn-link"><h4>Shared</h4></button> 
+
+                  <li class="list-group-item"> <span class="glyphicon glyphicon-user btn-lg" ></span><button type="button" class="btn btn-link"  (click)="myProfile()"><h4>my account</h4></button>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+
+   
+   
+
+  <div *ngIf="myFile" class="col-sm-9 col-md-9">
+          <h3 class="panel-title">DRIVE</h3>
+         <app-my-files></app-my-files> 
+
+          <div class="navbar navbar-default">
+              <div class="panel-heading">
+    
+              </div>
+              <div class="panel-body">
+                
+              </div>
+            </div>
+          </div>
+  
+
+    <div *ngIf="addFile" class="col-sm-9 col-md-9">
+        <h3 class="panel-title">DRIVE</h3>       
+<br>
+<br>
+<br>
+
+        <app-add-file></app-add-file>
+
+        <div class="navbar navbar-default">
+          <div class="panel-heading">
+
+          </div>
+          <div class="panel-body">
+            
+          </div>
+        </div>
+      </div>
+  
+      <div *ngIf="profile" class="col-sm-9 col-md-9">
+          <h3 class="panel-title">DRIVE</h3>       
+  
+          <app-update-user></app-update-user>  
+         
+        </div>
+    
+
+
+
+  </div>
+  </body>
+  </html>

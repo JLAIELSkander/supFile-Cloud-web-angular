@@ -1,0 +1,38 @@
+
+.log{
+   
+    top: 160px;
+    position: absolute;
+    right: 60px;
+    width: 250px;
+    height: 400px;
+    border: 1px dotted rgb(58, 58, 58);
+
+
+  }
+
+  .home{
+
+    position: relative;
+    left: -40px; 
+
+  }
+
+  .right{
+
+    position: absolute;
+    right: 5px; 
+
+  }
+
+  .center{
+
+    position: relative;
+    left: 130px; 
+
+  }
+
+
+
+
+

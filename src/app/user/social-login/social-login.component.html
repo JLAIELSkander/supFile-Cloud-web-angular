@@ -1,0 +1,88 @@
+<div>
+
+<!-- Button trigger modal -->
+<button class="btn-google" (click)="signInWithGoogle()" type="button" data-toggle="modal" data-target="#myModal">
+   GOOGLE
+  </button>
+  <!-- Modal -->
+
+  <br>
+  <br>
+  <div  *ngIf="user" class="card text-center">
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel"></h4>
+        </div>
+       
+       
+        <div class="modal-body">
+          <strong>Do you want to connect as</strong>
+          <br>
+          <br>
+
+            <img  src="{{ user.photoUrl }}">
+          </div>
+          <div>
+            <h4 class="card-title">{{ user.name }}</h4>
+           <p class="card-text">{{ user.email }}</p>
+          </div>
+        
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button"  (click)="SignIn()" data-dismiss="modal">connect</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<br>
+
+<div>
+    <!-- Button trigger modal -->
+    <button class="btn-facebook" (click)="signInWithFB()" type="button" data-toggle="modal" data-target="#myModal">
+        Facebook
+      </button>
+      <!-- Modal -->
+      
+      <div  *ngIf="user" class="card text-center">
+          
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <br><br>
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+          
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+            </div>
+
+            <br>
+            <br>
+            <br>
+          
+            <div class="modal-body">
+                <strong>Do you want to connect as</strong>
+                <br>
+                <br>
+                <img   src="{{ user.photoUrl }}">
+            
+                <h4 >{{ user.name }}</h4>
+               <p >{{ user.email }}</p>
+              </div>
+            
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="button"  (click)="SignIn()" data-dismiss="modal">connect</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    
+

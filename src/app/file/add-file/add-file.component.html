@@ -1,0 +1,61 @@
+
+<div *ngIf="alert.show" class="alert {{alert.color}}" role="alert">
+  {{alert.message}}
+</div>
+
+<div *ngIf="!progress">
+  <div (dragover)="AllowDrop($event)" (drop)="fileChangeEvent($event,'drop')" class="dropzone dragDrop">
+      <input type="file" id="modal-new-dropzone-input" multiple="true" class="modal-new-dropzone-input" (change)="fileChangeEvent($event)"/>
+
+      <label class="text-center" for="modal-new-dropzone-input">
+          <span class="modal-new-span-upload">
+                <img src="assets/images/drag2.png">
+          </span>
+          <ul id="modal-new-list-upload"></ul>
+      </label>
+  </div>
+
+  <div class="fileTable">
+      <table class="table">
+          <thead>
+              <tr>
+              <th scope="col">#</th>
+              <th scope="col">Name</th>
+              <th scope="col">Size</th>
+              <th scope="col"></th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let file of filesToUpload; let i = index">
+                  <th scope="row">{{i + 1}}</th>
+                  <td>{{file.name}}</td>
+                  <td>{{file.size}} octets</td>
+                  <td>
+                      <button type="button" class="btn btn-outline-danger" (click)="Delete(i)">
+                          supprimer
+                      </button>
+                  </td>
+              </tr>
+          </tbody>
+      </table>
+  </div>
+
+  <div class="col-sm-12">
+      <div class="col-sm-6 myBtn" (click)="upload()">
+          <button [disabled]="filesToUpload.length == 0"  type="button" class="btn btn-outline-primary btn-block">
+              Upload
+          </button>
+      </div>
+      
+      <div class="col-sm-6 myBtn">
+          <button type="button" class="btn btn-outline-danger btn-block" (click)="ResetFile()">
+              Reset
+          </button>
+      </div>
+      
+  </div>
+</div>
+
+<div *ngIf="progress">
+  Patientez...
+</div>

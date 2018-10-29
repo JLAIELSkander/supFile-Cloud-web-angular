@@ -1,0 +1,29 @@
+
+.bar { 
+  position:fixed;
+  top:10px;
+  left:0px;
+  right:0px;
+}
+.left { 
+    position:fixed;
+    left:5px;
+    top:20px;
+  }
+
+  .center {
+    position:fixed;
+    left:120px;
+    top:10px;
+    font-family:Cursive;
+
+
+  }
+
+  .right { 
+    position:fixed;
+    right:20px;
+  }
+.fix{
+  position:fixed;
+}

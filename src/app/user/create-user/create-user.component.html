@@ -1,0 +1,59 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+  <form [formGroup]="userForm" (ngSubmit)="suscribeUser()" class="form-group">
+       
+<div class="form-group">
+<label>firstName</label>
+<input  class="form-control"  formControlName="firstName">
+<label *ngIf="userForm.get('firstName').invalid && processValidation" [ngClass] = "'error'"> firstName is required. </label>
+</div>
+
+<div class="form-group">
+<label>lastName</label>
+<input class="form-control" formControlName="lastName">
+<label *ngIf="userForm.get('lastName').invalid && processValidation" [ngClass] = "'error'"> lastName is required. </label>
+
+</div>
+
+<div class="form-group">
+<label>phone</label>
+<input class="form-control" formControlName="phone">
+<label *ngIf="userForm.get('phone').invalid && processValidation" [ngClass] = "'error'"> phone is required. </label>
+
+</div>
+
+<div class="form-group">
+<label>address</label>
+<input class="form-control" formControlName="address">
+<label *ngIf="userForm.get('address').invalid && processValidation" [ngClass] = "'error'"> address is required. </label>
+
+</div>
+
+<div class="form-group">
+<label>storage</label>
+<input class="form-control" formControlName="storage">
+<label *ngIf="userForm.get('storage').invalid && processValidation" [ngClass] = "'error'"> storage is required. </label>
+
+</div>
+
+<div class="form-group">
+<label>mail</label>
+<input class="form-control" formControlName="mail">
+<label *ngIf="userForm.get('mail').invalid && processValidation" [ngClass] = "'error'"> mail is required. </label>
+</div>
+
+<div class="form-group">
+<label>password</label>
+<input class="form-control" formControlName="password">
+<label *ngIf="userForm.get('password').invalid && processValidation" [ngClass] = "'error'"> password is required. </label>
+</div>
+
+<button type="submit" >Suscribe</button>
+</form> 
+
